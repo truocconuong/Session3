@@ -1,11 +1,8 @@
 public class Main {
-    public static void main(String[] args) {
-
-        System.out.println("Thread mainnnn "+Thread.currentThread());
-        for(int i=0;i<10;i++){
-            System.out.println("myJavaThread ");
-        }
-        MyThread thread = new MyThread();
+    public static void main(String[] args) throws InterruptedException {
+        //Using runable
+        Sub2Thread sub2Thread = new Sub2Thread();
+        Thread thread = new Thread(sub2Thread);
         thread.start();
     }
 }

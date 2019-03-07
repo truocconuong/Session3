@@ -9,7 +9,7 @@ public class MyThread extends Thread {
                 System.out.print(i + " ");
                 dem++;
                 try {
-                    Thread.sleep(1500);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
@@ -18,11 +18,9 @@ public class MyThread extends Thread {
         }
     }
     public static boolean isPrimeNumber(int n) {
-        // so nguyen n < 2 khong phai la so nguyen to
         if (n < 2) {
             return false;
         }
-        // check so nguyen to khi n >= 2
         int squareRoot = (int) Math.sqrt(n);
         for (int i = 2; i <= squareRoot; i++) {
             if (n % i == 0) {
